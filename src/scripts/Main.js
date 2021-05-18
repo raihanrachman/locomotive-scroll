@@ -46,6 +46,7 @@ export class Smooth {
         }
 
         this.scroll.init();
+        console.log('a')
 
         if (window.location.hash) {
             // Get the hash without the '#' and find the matching element
