@@ -4,6 +4,7 @@ import SmoothScroll from './Smooth';
 
 export class Smooth {
     constructor(options = {}) {
+        console.log('aas')
         this.options = options;
 
         // Override default options with given ones

@@ -23,6 +23,7 @@ export default class extends Core {
         if (history.scrollRestoration) {
             history.scrollRestoration = 'manual';
         }
+        console.log('aass')
         window.scrollTo(0, 0);
 
         super(options);
@@ -228,7 +229,7 @@ export default class extends Core {
                     (this.instance.scroll[this.directionAxis] >
                         section.offset[this.directionAxis] &&
                         this.instance.scroll[this.directionAxis] <
-                            section.limit[this.directionAxis])
+                        section.limit[this.directionAxis])
                 ) {
                     if (this.direction === 'horizontal') {
                         this.transform(section.el, -this.instance.scroll[this.directionAxis], 0);
@@ -421,15 +422,13 @@ export default class extends Core {
         this.scrollbarWidth = this.scrollbarBCR.width;
 
         if (this.direction === 'horizontal') {
-            this.scrollbarThumb.style.width = `${
-                (this.scrollbarWidth * this.scrollbarWidth) /
+            this.scrollbarThumb.style.width = `${(this.scrollbarWidth * this.scrollbarWidth) /
                 (this.instance.limit.x + this.scrollbarWidth)
-            }px`;
+                }px`;
         } else {
-            this.scrollbarThumb.style.height = `${
-                (this.scrollbarHeight * this.scrollbarHeight) /
+            this.scrollbarThumb.style.height = `${(this.scrollbarHeight * this.scrollbarHeight) /
                 (this.instance.limit.y + this.scrollbarHeight)
-            }px`;
+                }px`;
         }
 
         this.scrollbarThumbBCR = this.scrollbarThumb.getBoundingClientRect();
@@ -457,15 +456,13 @@ export default class extends Core {
         this.scrollbarWidth = this.scrollbarBCR.width;
 
         if (this.direction === 'horizontal') {
-            this.scrollbarThumb.style.width = `${
-                (this.scrollbarWidth * this.scrollbarWidth) /
+            this.scrollbarThumb.style.width = `${(this.scrollbarWidth * this.scrollbarWidth) /
                 (this.instance.limit.x + this.scrollbarWidth)
-            }px`;
+                }px`;
         } else {
-            this.scrollbarThumb.style.height = `${
-                (this.scrollbarHeight * this.scrollbarHeight) /
+            this.scrollbarThumb.style.height = `${(this.scrollbarHeight * this.scrollbarHeight) /
                 (this.instance.limit.y + this.scrollbarHeight)
-            }px`;
+                }px`;
         }
 
         this.scrollbarThumbBCR = this.scrollbarThumb.getBoundingClientRect();
