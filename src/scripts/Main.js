@@ -40,7 +40,7 @@ export class Smooth {
             (this.tablet.smooth && this.options.isTablet) ||
             (this.smartphone.smooth && this.options.isMobile && !this.options.isTablet)
         ) {
-            this.scroll = new SmoothScroll(this.options);
+            this.scroll = new SmoothScroll(this.options, this.callback);
         } else {
             this.scroll = new NativeScroll(this.options);
         }
@@ -55,6 +55,10 @@ export class Smooth {
             // If found, scroll to the element
             if (target) this.scroll.scrollTo(target);
         }
+    }
+
+    callback() {
+        console.log('haha')
     }
 
     update() {
